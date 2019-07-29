@@ -134,28 +134,11 @@ void RendererGL::setKeyFrames(const vector<Animator2D::KeyFrame>& key_frames)
 
 void RendererGL::setLights()
 {  
-   vec4 light_position(-10.0f, 0.0f, 10.0f, 1.0f);
-   vec4 ambient_color(0.3f, 0.3f, 0.3f, 1.0f);
-   vec4 diffuse_color(0.7f, 0.7f, 0.7f, 1.0f);
-   vec4 specular_color(0.9f, 0.9f, 0.9f, 1.0f);
+   const vec4 light_position(0.0f, 0.0f, 1.0f, 0.0f);
+   const vec4 ambient_color(0.3f, 0.3f, 0.3f, 1.0f);
+   const vec4 diffuse_color(0.7f, 0.7f, 0.7f, 1.0f);
+   const vec4 specular_color(0.9f, 0.9f, 0.9f, 1.0f);
    Lights.addLight( light_position, ambient_color, diffuse_color, specular_color );
-
-   light_position = vec4(0.0f, 35.0f, 10.0f, 1.0f);
-   ambient_color = vec4(0.2f, 0.2f, 0.2f, 1.0f);
-   diffuse_color = vec4(0.9f, 0.5f, 0.1f, 1.0f);
-   specular_color = vec4(1.0f, 1.0f, 1.0f, 1.0f);
-   vec3 spotlight_direction(0.0f, -1.0f, -1.5f);
-   float spotlight_exponent = 128;
-   float spotlight_cutoff_angle_in_degree = 7.0f;
-   Lights.addLight( 
-      light_position, 
-      ambient_color, 
-      diffuse_color, 
-      specular_color,
-      spotlight_direction,
-      spotlight_exponent,
-      spotlight_cutoff_angle_in_degree
-   );  
 }
 
 void RendererGL::setObject()
