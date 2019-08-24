@@ -32,7 +32,7 @@ void RendererGL::initialize()
       return;
    }
    glfwWindowHint( GLFW_CONTEXT_VERSION_MAJOR, 4 );
-   glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 3 );
+   glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 5 );
    glfwWindowHint( GLFW_DOUBLEBUFFER, GLFW_TRUE );
    glfwWindowHint( GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE );
 
@@ -253,8 +253,8 @@ void RendererGL::play(const vector<Animator2D::KeyFrame>& key_frames)
    while (!glfwWindowShouldClose( Window )) {
       render();
 
-      glfwPollEvents();
       glfwSwapBuffers( Window );
+      glfwPollEvents();
    }
    glfwDestroyWindow( Window );
 }
