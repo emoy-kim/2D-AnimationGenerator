@@ -1,0 +1,9 @@
+target_link_libraries(
+    2DAnimationGenerator
+        glad
+        glfw3
+        pthread
+        dl
+        X11
+        freeimage
+)
