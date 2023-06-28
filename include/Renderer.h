@@ -15,7 +15,7 @@ public:
 
 
    RendererGL();
-   ~RendererGL();
+   ~RendererGL() = default;
 
    void play(const std::vector<Animator2D::KeyFrame>& key_frames);
 
